@@ -1,0 +1,4 @@
+interface:
+  display_name: "AI Series Visual DNA"
+  short_description: "建立不限题材、保留世界特征与电影级视效的真人电影长剧视觉 DNA"
+  default_prompt: "Use $ai-series-visual-dna to release one 16:9 live-action series STYLE-BASE that preserves the source genre and world rules with integrated cinematic VFX where appropriate, under the project's DNA directory."

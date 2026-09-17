@@ -1,0 +1,4 @@
+interface:
+  display_name: "AI Series Art Director"
+  short_description: "按真人电影风格主动设计不限题材的角色、群众、场景与重要道具资产库"
+  default_prompt: "Use $ai-series-art-director with a confirmed live-action STYLE-BASE to design genre-faithful character, crowd, scene, and prop assets with cinematic VFX where appropriate, then publish an approved asset index."
