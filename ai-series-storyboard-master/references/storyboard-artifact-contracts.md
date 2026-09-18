@@ -16,7 +16,8 @@
 - 场次 ID 固定为 `EPddd-SCddd`；片段 ID 固定为 `EPddd-SCddd-SEGddd`。
 - 正式提示词控制指令使用英文；只有登记过的源文本引号内允许原语言。
 - 禁止 `latest`、`current`、未版本化文件或未登记 `@参考标签`。
-- 不覆盖旧版。内容、上游引用或状态变化时写新版本。
+- 不覆盖旧版。实质内容或引用变化时写新版本；不得仅为批准状态迁移递增版本。
+- 新片段时长为 `0 < duration <= 30s`，每片段 6–12 镜，数量在此范围内匹配戏剧任务。
 
 ```text
 STORYBOARD/
@@ -80,7 +81,7 @@ D002 | Voice-over | NARRATOR | 原文旁白
 ### Segment Catalog
 | Segment ID | 时长 | 叙事功能 | 戏剧目标 | 角色资产 | 群众资产 | 场景资产 | 道具资产 | 原文 ID |
 |---|---:|---|---|---|---|---|---|---|
-| EP001-SC001-SEG001 | 8.0s | 建立对峙 | 迫使对方回应 | CHAR-001, CHAR-002 | CROWD-001 | SCN-001 | PROP-001 | D001 |
+| EP001-SC001-SEG001 | 24.0s | 建立对峙 | 迫使对方回应 | CHAR-001, CHAR-002 | CROWD-001 | SCN-001 | PROP-001 | D001 |
 | EP001-SC001-SEG002 | 7.0s | 权力反转 | 暴露新线索 | CHAR-001, CHAR-002 | none | SCN-001 | PROP-001 | D002 |
 ```
 
@@ -97,7 +98,7 @@ D002 | Voice-over | NARRATOR | 原文旁白
 - source-scene: EP001-SC001
 - coverage: complete
 - status: approved
-- duration: 8.0s
+- duration: 24.0s
 - character-assets: CHAR-001, CHAR-002
 - crowd-assets: CROWD-001
 - scene-asset: SCN-001
@@ -123,7 +124,7 @@ D002 | Voice-over | NARRATOR | 原文旁白
 ### Seedance 2.0 Prompt
 ~~~text
 [FOUNDATION]
-Duration: 8.0s
+Duration: 24.0s
 Frame: 16:9
 References: @CHAR-001-REF-v1.0, @CHAR-002-REF-v1.0, @CROWD-001-REF-v1.0, @SCN-001-REF-v1.0, @PROP-001-REF-v1.0
 Character CHAR-001: [Character Base 原文]
@@ -152,6 +153,34 @@ Camera angle: ...
 Camera movement: ...
 Dramatic execution: The subject begins from a precise pose and eyeline, performs one motivated action, and lets the action trigger a visible performance, line, deformation, volume, surface, or breathing change allowed by the inherited visual medium. Then the other person or the environment responds, leaving a specific final posture, distance, object state, silhouette, or gaze direction for the next shot.
 
+Shot 3 [8.0s-12.0s]
+Shot scale: ...
+Composition: ...
+Camera angle: ...
+Camera movement: ...
+Dramatic execution: [从原剧本提取接续动作与因果，不另创剧情]
+
+Shot 4 [12.0s-16.0s]
+Shot scale: ...
+Composition: ...
+Camera angle: ...
+Camera movement: ...
+Dramatic execution: [从原剧本提取接续动作与因果，不另创剧情]
+
+Shot 5 [16.0s-20.0s]
+Shot scale: ...
+Composition: ...
+Camera angle: ...
+Camera movement: ...
+Dramatic execution: [从原剧本提取接续动作与因果，不另创剧情]
+
+Shot 6 [20.0s-24.0s]
+Shot scale: ...
+Composition: ...
+Camera angle: ...
+Camera movement: ...
+Dramatic execution: [从原剧本提取接续动作与因果，不另创剧情]
+
 Segment transition: ...
 Continuity into next segment: ...
 ~~~
@@ -163,7 +192,7 @@ Continuity into next segment: ...
 
 - `[FOUNDATION]` 必须原样包含每个实际使用的 Character Base、Crowd Base、唯一 Scene Base 与 Prop Base，不得改词、压缩或混合。
 - `[ATMOSPHERE AND IMAGE QUALITY]` 必须包含且只包含 `Style Core`、`Visual Baseline`、`Color and Tonality` 三项。
-- `[VISUAL CONTENT]` 必须包含 2–4 个镜头；镜头编号连续，首镜从 0.0s 开始，相邻区间无空隙或重叠，尾镜结束时间等于片段时长。
+- `[VISUAL CONTENT]` 必须包含 6–12 个镜头；镜头编号连续，首镜从 0.0s 开始，相邻区间无空隙或重叠，尾镜结束时间等于片段时长。
 - 每个镜头必须包含 `Shot scale`、`Composition`、`Camera angle`、`Camera movement` 与唯一一个 `Dramatic execution`；禁止出现旧字段 `Subject and action`、`Performance`。
 - `Dramatic execution` 必须是单个连续英文段落，按时间顺序融合主体意图与动作、可见表演变化、关系对象的即时反应和镜头结束状态；不得把动作清单与情绪说明并排堆放。
 - 原文调用只允许以内联形式嵌入 `Dramatic execution`：`Dialogue [Dxxx]: "..."`、`Voice-over [Dxxx]: "..."`、`On-screen text [Dxxx]: "..."`。引号内必须逐字等于 Source Text Registry，调用前后必须存在英文动作、说话方式或反应语句，禁止独立成行。
@@ -178,3 +207,13 @@ Continuity into next segment: ...
 - 首次通过校验后直接交付 `approved` 计划与片段，不创建仅状态不同的副本，也不请求逐场审批。
 - 只有用户明确提出镜头、文本分配、时长、资产引用或上游版本修改时才创建一个新的 `approved` 版本。
 - 修改片段戏剧任务、镜头结构、源文本分配或引用资产时升级主版本；只压缩英文措辞且可见结果不变时升级次版本。
+
+## 白膜派生产物
+
+每片段在本场 `PREVIS/` 下交付 `EPxxx-SCxxx-SEGxxx-WB-vN.N.json`（执行描述）、同名 `.py`（建模调度源）、`.blend`（可编辑工程）、`.mp4`（视频）与 `EPxxx-SCxxx-SEGxxx-WB-vN.N-QA.json`。具体字段见 [whitebox-previs-protocol.md](whitebox-previs-protocol.md)。
+
+白膜版本独立于分镜版本；精确绑定分镜全文、VISUAL CONTENT、STYLE-BASE、实际引用实体/图片及建模脚本的 SHA-256。不相关索引项升级不触发白膜失效。分镜或实际引用图变更后原白膜不能继续声称适配。
+
+分镜内容 `approved` 与白膜运行状态分离：`blocked`、`rendered`、`complete`。新白膜使用 schema_version 2，记录 Blender MCP 的执行工具与调用记录；结构、媒体检查及正常速度通看通过才可 `complete`。不要求逐帧、密集采样或逐镜首中尾截图。无法观看时保留 `rendered` / 待通看，不伪造观看证据。关键可见事件不能因简化而丢失，但可以采用粗几何代理。旧版文件保持可读，不自动改写。
+
+每个片段的 `.mp4`、`.blend`、JSON、源码及 QA 单独交付。默认不创建全场拼接视频、concat 清单或总合辑；用户明确要求拼接时才额外生成。上游文字细节约束正式成片，不意味着白膜必须逐项精细建模。

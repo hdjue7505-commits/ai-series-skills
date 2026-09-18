@@ -1,4 +1,4 @@
 interface:
   display_name: "AI Series Storyboard Master"
-  short_description: "把长剧单场戏拆成电影级片段与可执行的 Seedance 视频提示词"
-  default_prompt: "Use $ai-series-storyboard-master to turn one scripted scene, an approved STYLE-BASE, and approved art assets into validated Seedance 2.0 segment prompts."
+  short_description: "单场戏拆为30秒内6–12镜分镜，并结合全资产图制作无声无字幕白膜预演"
+  default_prompt: "Use $ai-series-storyboard-master to create validated English storyboard segments of up to 30 seconds and 6–12 shots, then build silent, caption-free whitebox previs from every referenced asset image and the exact VISUAL CONTENT."

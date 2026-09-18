@@ -198,8 +198,8 @@ def parse_duration(value: str) -> float:
     if not match:
         raise ValueError(f"invalid duration: {value}")
     duration = float(match.group("value"))
-    if not 0 < duration <= 10:
-        raise ValueError(f"duration {duration:g}s is outside >0 and <=10s")
+    if not 0 < duration <= 30:
+        raise ValueError(f"duration {duration:g}s is outside >0 and <=30s")
     return duration
 
 
@@ -669,8 +669,8 @@ def validate_shots(result: Result, prompt: str, duration: float) -> None:
         re.M,
     )
     shots = list(shot_re.finditer(visual))
-    if not 2 <= len(shots) <= 4:
-        result.errors.append(f"segment must contain 2-4 shots, found {len(shots)}")
+    if not 6 <= len(shots) <= 12:
+        result.errors.append(f"segment must contain 6-12 shots, found {len(shots)}")
     previous_end = 0.0
     required = (
         "Shot scale:",
@@ -919,11 +919,12 @@ def collect_paths(inputs: list[str]) -> list[Path]:
     for item in inputs:
         path = Path(item)
         if path.is_dir():
-            paths.extend(sorted(path.rglob("*-PLAN-*.md")))
-            paths.extend(sorted(path.rglob("*-SEG*.md")))
+            paths.extend(sorted(candidate for candidate in path.rglob("*.md")
+                                if PLAN_RE.fullmatch(candidate.stem)
+                                or SEGMENT_RE.fullmatch(candidate.stem)))
         else:
             paths.append(path)
-    return paths
+    return list(dict.fromkeys(paths))
 
 
 def main() -> int:
