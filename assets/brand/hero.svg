@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="800" viewBox="0 0 1600 800" role="img" aria-labelledby="title desc">
+<title id="title">oh-my-director - Every world begins with an idea</title>
+<desc id="desc">An original cinematic brand illustration. A lone storyteller faces a golden doorway above a midnight city. Large ivory typography reads OH, MY. DIRECTOR.</desc>
+<defs>
+<linearGradient id="sky" x2="1" y2="1"><stop stop-color="#070b12"/><stop offset=".58" stop-color="#121e28"/><stop offset="1" stop-color="#233339"/></linearGradient>
+<radialGradient id="halo"><stop stop-color="#ffc878" stop-opacity=".52"/><stop offset=".4" stop-color="#d79b56" stop-opacity=".15"/><stop offset="1" stop-color="#d79b56" stop-opacity="0"/></radialGradient>
+<linearGradient id="door" x2="0" y2="1"><stop stop-color="#fff3ca"/><stop offset=".6" stop-color="#ffcf8a"/><stop offset="1" stop-color="#a76b35"/></linearGradient>
+<linearGradient id="beam" x2="0" y2="1"><stop stop-color="#ffcf8a" stop-opacity=".45"/><stop offset="1" stop-color="#ffcf8a" stop-opacity="0"/></linearGradient>
+<pattern id="grain" width="9" height="9" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r=".6" fill="#fff" opacity=".055"/></pattern>
+</defs>
+<path fill="url(#sky)" d="M0 0h1600v800H0z"/>
+<ellipse cx="1260" cy="363" rx="430" ry="420" fill="url(#halo)"/>
+<g fill="none" stroke="#acc2cf" stroke-opacity=".11"><circle cx="1252" cy="377" r="272"/><circle cx="1252" cy="377" r="290"/><path d="M0 544h1600M1010 0v800M0 564h1600"/></g>
+<g fill="#e7c692"><circle cx="972" cy="151" r="1.6"/><circle cx="1431" cy="132" r="1.2"/><circle cx="1106" cy="90" r="1"/><circle cx="1544" cy="282" r="1.4"/><circle cx="932" cy="421" r="1"/><circle cx="1163" cy="184" r="1.2"/></g>
+<g fill="#172731"><path d="M0 555v-56h55v-38h24v94h42v-106h72v106h48v-68h43v-94h31v162h51v-84h78v84h38v-44h87v44h42v-101h54v101h65v-65h37v65h48v-161h37v161h69v-79h80v79h48v-139h58v139h55v-69h46v69h220v-56h45v-120h31v176h53v-93h55v93h45v-58h72v58z"/></g>
+<g fill="#d9bc83" opacity=".33"><path d="M144 466h4v8h-4zm13 0h4v8h-4zm638-40h4v9h-4zm0 24h4v9h-4zm185-23h4v9h-4zm13 0h4v9h-4zm410 50h4v8h-4zm13 0h4v8h-4z"/></g>
+<path d="M1178 559V202h159v357" fill="#121c24" stroke="#f2bb76" stroke-width="2"/>
+<path d="M1200 559V222h115v337z" fill="url(#door)"/>
+<path d="m1200 559-240 166h560l-205-166z" fill="url(#beam)"/>
+<path d="M0 612 334 589l224 34 266-44 292 22 262-34 222 38v195H0z" fill="#0b141d"/>
+<path d="m967 800 275-205h24l251 205z" fill="url(#beam)" opacity=".8"/>
+<path d="m906 800 332-205M1560 800l-290-205" fill="none" stroke="#d8ad71" stroke-opacity=".25"/>
+<g fill="#070d13" stroke="#e2b579" stroke-width="1.2"><circle cx="1255" cy="553" r="9"/><path d="m1247 563-7 26 3 29 7-1 5-24 5 24 7-1-4-28-1-23z"/><path d="m1243 567-11 28 4 2 13-24m12-6 11 28-4 2-12-24"/></g>
+<path d="m1250 619-52 100h102l-40-100" fill="#091017" opacity=".7"/>
+<path fill="url(#grain)" d="M0 0h1600v800H0z"/>
+<g font-family="Arial, Helvetica, sans-serif">
+<text x="76" y="89" fill="#d7b579" font-size="17" letter-spacing="5">AN IDEA-TO-SCREEN CREATIVE WORKFLOW</text>
+<text x="69" y="260" fill="#f3efe5" font-size="126" font-weight="800" letter-spacing="-6">OH, MY.</text>
+<text x="66" y="413" fill="#f3efe5" font-size="150" font-weight="800" letter-spacing="-8">DIRECTOR.</text>
+<path d="M78 463h60" stroke="#dcb77c" stroke-width="3"/>
+<text x="78" y="512" fill="#dec394" font-size="28" letter-spacing="1">Every world begins with an idea.</text>
+<text x="78" y="554" fill="#9dabb4" font-size="21">Give yours a story. A look. A world. A camera.</text>
+<text x="78" y="727" fill="#d3d9dc" font-size="16" letter-spacing="3">STORY / VISUAL DNA / ART / STORYBOARD</text>
+<text x="1517" y="727" fill="#d7b579" font-size="15" text-anchor="end" letter-spacing="3">YOUR VISION. FRAME ONE.</text>
+</g>
+<path d="M32 63V32h31m1474 0h31v31M32 737v31h31m1474 0h31v-31" fill="none" stroke="#6c7476"/>
+</svg>

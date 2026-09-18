@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="670" viewBox="0 0 1600 670" role="img" aria-labelledby="title desc">
+<title id="title">The Last Train - original narrative concept triptych</title>
+<desc id="desc">Three original vector concept frames, not generated production footage: an empty midnight platform, a mysterious amber ticket, and a figure facing the open door of the last train.</desc>
+<defs>
+<linearGradient id="night" x2="0" y2="1"><stop stop-color="#21313c"/><stop offset="1" stop-color="#080f18"/></linearGradient>
+<linearGradient id="light" x2="0" y2="1"><stop stop-color="#ffd99b"/><stop offset="1" stop-color="#b8743c"/></linearGradient>
+<radialGradient id="glow"><stop stop-color="#d8a867" stop-opacity=".55"/><stop offset="1" stop-color="#d8a867" stop-opacity="0"/></radialGradient>
+<clipPath id="a"><rect x="40" y="116" width="488" height="380" rx="4"/></clipPath>
+<clipPath id="b"><rect x="556" y="116" width="488" height="380" rx="4"/></clipPath>
+<clipPath id="c"><rect x="1072" y="116" width="488" height="380" rx="4"/></clipPath>
+</defs>
+<rect width="1600" height="670" rx="20" fill="#0a111a"/>
+<g font-family="Arial, Helvetica, sans-serif"><text x="40" y="58" fill="#dabb89" font-size="16" letter-spacing="4">A SINGLE IDEA. THREE UNFORGETTABLE FRAMES.</text><text x="1560" y="58" text-anchor="end" fill="#899da9" font-size="14" letter-spacing="2">ORIGINAL BRAND CONCEPT / NOT PRODUCTION OUTPUT</text></g>
+<g clip-path="url(#a)">
+<rect x="40" y="116" width="488" height="380" fill="url(#night)"/>
+<ellipse cx="357" cy="280" rx="180" ry="170" fill="url(#glow)"/>
+<path d="M40 175 528 138v30L40 220z" fill="#070e16"/>
+<path d="m40 225 488-51" stroke="#6c7a7e" stroke-width="2"/>
+<g fill="#060d16"><path d="M80 202h13v209H80zm150-14h9v172h-9zm121-13h6v144h-6zm86-10h5v133h-5z"/><path d="M40 430 528 276v220H40z"/></g>
+<path d="M40 458 528 288" stroke="#d8bd8e" stroke-width="4"/>
+<path d="M40 489 528 294M111 496l417-196M229 496l299-193" stroke="#5d727e" stroke-width="2"/>
+<path d="M92 210h61m87-18h37m80-15h28m60-10h19" stroke="#f7d99b" stroke-width="4"/>
+<g stroke="#8498a5" opacity=".27"><path d="m159 248-9 54m44-33-7 43m98-64-8 52m140-39-6 40m-35 65-9 45m-210-47-9 60m84-12-9 58m215-113-6 50m-362-99-7 42"/></g>
+<path d="M298 237h68v40h-68z" fill="#15232d" stroke="#738083"/>
+<text x="332" y="263" text-anchor="middle" font-family="monospace" font-size="18" fill="#efd1a0">00:00</text>
+<circle cx="305" cy="335" r="7" fill="#080e16"/>
+<path d="m299 342-6 33 7 2 5-16 5 16 7-2-6-32z" fill="#080e16"/>
+</g>
+<g clip-path="url(#b)">
+<rect x="556" y="116" width="488" height="380" fill="#14222c"/>
+<ellipse cx="807" cy="306" rx="245" ry="210" fill="url(#glow)"/>
+<path d="m556 458 103-68 81-58 55 20 42 72 61 72H556z" fill="#07111c"/>
+<path d="m693 413 43-75 33-6 68 43-8 48-67 49z" fill="#8a7564"/>
+<path d="m734 354 33-40 24 3 11 45-15 34-26-3z" fill="#c4a184"/>
+<g transform="rotate(-12 804 286)">
+<path d="M673 214h260v135H673z" fill="#d3b78b"/>
+<path d="M681 222h244v119H681z" fill="none" stroke="#7a5c3a"/>
+<path d="M863 215v134" stroke="#795d3f" stroke-dasharray="4 5"/>
+<text x="696" y="254" fill="#403829" font-family="Arial, Helvetica, sans-serif" font-size="14" letter-spacing="3">ONE WAY</text>
+<text x="696" y="290" fill="#302c24" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="27">HOME</text>
+<path d="M696 313h108m-108 9h77" stroke="#7b6042" stroke-width="2"/>
+<text x="898" y="280" text-anchor="middle" fill="#4a3b2b" font-family="monospace" font-size="23">01</text>
+<path d="m821 214-16 24 20 16-17 22 18 24-23 23 17 26" fill="none" stroke="#fff0b9" stroke-width="3"/>
+</g>
+<path d="m1044 155-128 39m128 242-117-31m-332-53-43 16" stroke="#bf9c65" opacity=".3"/>
+</g>
+<g clip-path="url(#c)">
+<rect x="1072" y="116" width="488" height="380" fill="url(#night)"/>
+<ellipse cx="1335" cy="293" rx="217" ry="207" fill="url(#glow)"/>
+<path d="m1072 185 488-47v308l-488-36z" fill="#21343e" stroke="#829193"/>
+<path d="m1087 203 136-10v116l-136 1zm327-25 132-12v150l-132-4z" fill="#09121d" stroke="#63777e"/>
+<path d="m1270 178 107-9v248l-107-6z" fill="url(#light)" stroke="#efcc95" stroke-width="3"/>
+<path d="m1275 415-91 81h303l-114-78z" fill="#d6a363" opacity=".22"/>
+<path d="m1072 351 488 5m-488 45 488 35" stroke="#708083" opacity=".5"/>
+<path d="m1072 447 488 43" stroke="#d9b679" stroke-width="3"/>
+<g fill="#0a1018" stroke="#d3ae77" stroke-width="1"><circle cx="1324" cy="336" r="12"/><path d="m1314 349-12 51 7 42 12 1 5-37 7 39 12-1-9-45-2-48z"/><path d="m1309 357-13 36 5 2 14-30m17-9 15 31-5 3-14-24"/></g>
+<path d="m1314 444-34 52h78l-27-52z" fill="#080f17"/>
+<path d="m1088 148-10 72m56-57-8 55m298-9-9 50m77-97-10 67m-21 173-8 51m-339-16-8 55" stroke="#9cb5c0" opacity=".23"/>
+</g>
+<g font-family="Arial, Helvetica, sans-serif">
+<g fill="#d7b680" font-size="15" letter-spacing="3"><text x="40" y="536">01 / THE QUESTION</text><text x="556" y="536">02 / THE IMPOSSIBLE</text><text x="1072" y="536">03 / THE CHOICE</text></g>
+<g fill="#f0ede5" font-size="29" font-weight="700"><text x="40" y="577">The city forgot this station.</text><text x="556" y="577">The ticket remembers you.</text><text x="1072" y="577">Do you step inside?</text></g>
+<g fill="#9aacb6" font-size="19"><text x="40" y="617">Build a world. Leave one thing wrong.</text><text x="556" y="617">Turn a small object into a story promise.</text><text x="1072" y="617">Let an action carry the emotion.</text></g>
+</g>
+</svg>

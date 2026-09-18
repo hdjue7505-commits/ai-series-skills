@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="440" viewBox="0 0 1600 440" role="img" aria-labelledby="title desc">
+<title id="title">Four skills, one continuous creative journey</title>
+<desc id="desc">The workflow runs from manga-screenwriter to ai-series-visual-dna, ai-series-art-director, and ai-series-storyboard-master. It delivers story, style, assets, storyboards and optional tool-dependent previs, not a finished film.</desc>
+<defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#0b111a"/><stop offset="1" stop-color="#16242c"/></linearGradient></defs>
+<rect width="1600" height="440" rx="20" fill="url(#bg)"/>
+<g font-family="Arial, Helvetica, sans-serif">
+<text x="62" y="61" fill="#d6b47c" font-size="16" letter-spacing="4">THE DIRECTOR'S DESK</text>
+<text x="1538" y="61" text-anchor="end" fill="#85959f" font-size="15" letter-spacing="2">ONE PROJECT. FOUR SPECIALTIES.</text>
+<path d="M87 125h1419" stroke="#3c454b" stroke-width="2"/>
+<path d="m434 121 7 4-7 4m366-8 7 4-7 4m366-8 7 4-7 4" fill="none" stroke="#d6b47c" stroke-width="2"/>
+<g fill="#14202a" stroke="#d6b47c" stroke-width="2"><circle cx="88" cy="125" r="22"/><circle cx="454" cy="125" r="22"/><circle cx="820" cy="125" r="22"/><circle cx="1186" cy="125" r="22"/></g>
+<g fill="#f2dfbb" font-size="15" text-anchor="middle"><text x="88" y="130">01</text><text x="454" y="130">02</text><text x="820" y="130">03</text><text x="1186" y="130">04</text></g>
+<g fill="#f3efe5" font-size="37" font-weight="700"><text x="64" y="209">THE STORY</text><text x="430" y="209">THE LOOK</text><text x="796" y="209">THE WORLD</text><text x="1162" y="209">THE SHOT</text></g>
+<g fill="#b0bec6" font-size="21"><text x="64" y="253">Make us care.</text><text x="430" y="253">Make it recognizable.</text><text x="796" y="253">Make it consistent.</text><text x="1162" y="253">Make every cut count.</text></g>
+<g fill="#d6b47c" font-size="16"><text x="64" y="302">SCREENPLAY + CONTINUITY</text><text x="430" y="302">VERSIONED STYLE-BASE</text><text x="796" y="302">CHARACTERS + SPACES + PROPS</text><text x="1162" y="302">STORYBOARDS + PREVIS*</text></g>
+<path d="M64 342h1472" stroke="#3b484f"/>
+<text x="64" y="388" fill="#95a7b1" font-size="17">Confirmed story and style decisions travel with the project. Every downstream file knows its source.</text>
+<text x="1536" y="388" text-anchor="end" fill="#95a7b1" font-size="15">*Requires references + Blender MCP.</text>
+</g>
+</svg>
