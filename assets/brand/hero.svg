@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1600" height="800" viewBox="0 0 1600 800" role="img" aria-labelledby="title desc">
-<title id="title">oh-my-director - Every world begins with an idea</title>
+<title id="title">oh-my-director - A creative workflow for Seedance 2.5</title>
 <desc id="desc">An original cinematic brand illustration. A lone storyteller faces a golden doorway above a midnight city. Large ivory typography reads OH, MY. DIRECTOR.</desc>
 <defs>
 <linearGradient id="sky" x2="1" y2="1"><stop stop-color="#070b12"/><stop offset=".58" stop-color="#121e28"/><stop offset="1" stop-color="#233339"/></linearGradient>
@@ -24,13 +24,13 @@
 <path d="m1250 619-52 100h102l-40-100" fill="#091017" opacity=".7"/>
 <path fill="url(#grain)" d="M0 0h1600v800H0z"/>
 <g font-family="Arial, Helvetica, sans-serif">
-<text x="76" y="89" fill="#d7b579" font-size="17" letter-spacing="5">AN IDEA-TO-SCREEN CREATIVE WORKFLOW</text>
+<text x="76" y="89" fill="#d7b579" font-size="17" letter-spacing="4">A CREATIVE WORKFLOW FOR SEEDANCE 2.5</text>
 <text x="69" y="260" fill="#f3efe5" font-size="126" font-weight="800" letter-spacing="-6">OH, MY.</text>
 <text x="66" y="413" fill="#f3efe5" font-size="150" font-weight="800" letter-spacing="-8">DIRECTOR.</text>
 <path d="M78 463h60" stroke="#dcb77c" stroke-width="3"/>
 <text x="78" y="512" fill="#dec394" font-size="28" letter-spacing="1">Every world begins with an idea.</text>
-<text x="78" y="554" fill="#9dabb4" font-size="21">Give yours a story. A look. A world. A camera.</text>
-<text x="78" y="727" fill="#d3d9dc" font-size="16" letter-spacing="3">STORY / VISUAL DNA / ART / STORYBOARD</text>
+<text x="78" y="554" fill="#9dabb4" font-size="21">Shape the story. Unify the look. Rehearse the shot.</text>
+<text x="78" y="727" fill="#d3d9dc" font-size="16" letter-spacing="3">SCREENPLAY / STYLE BIBLE / ART / PREVIS</text>
 <text x="1517" y="727" fill="#d7b579" font-size="15" text-anchor="end" letter-spacing="3">YOUR VISION. FRAME ONE.</text>
 </g>
 <path d="M32 63V32h31m1474 0h31v31M32 737v31h31m1474 0h31v-31" fill="none" stroke="#6c7476"/>

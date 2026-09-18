@@ -121,7 +121,7 @@ D002 | Voice-over | NARRATOR | 原文旁白
 11. 与前后片段衔接：
 12. 参考调用：
 
-### Seedance 2.0 Prompt
+### Seedance 2.5 Prompt
 ~~~text
 [FOUNDATION]
 Duration: 24.0s
@@ -190,6 +190,7 @@ Continuity into next segment: ...
 
 ## Seedance 提示词
 
+- 新主稿标题为 `### Seedance 2.5 Prompt`；兼容旧 `### Seedance 2.0 Prompt`。单文件只允许一个受支持的提示词区块；不为标题迁移改写旧产物。
 - `[FOUNDATION]` 必须原样包含每个实际使用的 Character Base、Crowd Base、唯一 Scene Base 与 Prop Base，不得改词、压缩或混合。
 - `[ATMOSPHERE AND IMAGE QUALITY]` 必须包含且只包含 `Style Core`、`Visual Baseline`、`Color and Tonality` 三项。
 - `[VISUAL CONTENT]` 必须包含 6–12 个镜头；镜头编号连续，首镜从 0.0s 开始，相邻区间无空隙或重叠，尾镜结束时间等于片段时长。

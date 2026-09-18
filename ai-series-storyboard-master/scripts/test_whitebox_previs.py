@@ -36,7 +36,7 @@ def shot_text(duration=24, count=6):
     ) + "\n\nSegment transition: Cut after the receiver clears the table.\nContinuity into next segment: Receiver retains the tube in the left hand."
 
 
-def fixture(root):
+def fixture(root, prompt_version="2.5"):
     """All sources are synthetic test design, not project canon; never overwrites an existing directory."""
     root = Path(root).resolve()
     root.mkdir(parents=True, exist_ok=False)
@@ -105,7 +105,7 @@ def fixture(root):
     plan.write_text(f"## {plan.stem}｜Synthetic test\n{common}- source-heading: EP001-SC001 SYNTHETIC TEST ONLY\n- segment-count: 1\n\n### 场戏设计\n{numbered(plan_fields)}\n\n### Source Text Registry\n~~~text\nD001 | Dialogue | CHAR-001 | Take it.\nD002 | Voice-over | NARRATOR | The exchange is done.\nD003 | On-screen text | SCREEN | Later\n~~~\n\n### Segment Catalog\n| Segment ID | Duration | Function | Task | Characters | Crowds | Scene | Props | Source |\n|---|---|---|---|---|---|---|---|---|\n| EP001-SC001-SEG001 | 24s | exchange | handoff | CHAR-001, CHAR-002 | CROWD-001 | SCN-001 | PROP-001 | D001, D002, D003 |\n", encoding="utf-8")
     bases = "\n".join(f"{a[3]} {a[0]}: {a[4]}" for a in definitions)
     prompt = "[FOUNDATION]\nDuration: 24s\nFrame: 16:9\nReferences: " + ", ".join(a["label"] for a in assets) + f"\n{bases}\n\n[ATMOSPHERE AND IMAGE QUALITY]\nStyle Core: Live-action cinema.\nVisual Baseline: Clear physical staging.\nColor and Tonality: Neutral daylight.\n\n[VISUAL CONTENT]\n" + shot_text()
-    segment.write_text(f"## {segment.stem}｜Synthetic test\n{common}- inherits-plan: {plan.stem}\n- duration: 24s\n- source-text-ids: D001, D002, D003\n\n### 片段方案\n{numbered(segment_fields)}\n\n### Seedance 2.0 Prompt\n~~~text\n{prompt}\n~~~\n", encoding="utf-8")
+    segment.write_text(f"## {segment.stem}｜Synthetic test\n{common}- inherits-plan: {plan.stem}\n- duration: 24s\n- source-text-ids: D001, D002, D003\n\n### 片段方案\n{numbered(segment_fields)}\n\n### Seedance {prompt_version} Prompt\n~~~text\n{prompt}\n~~~\n", encoding="utf-8")
     output = scene / "PREVIS"
     output.mkdir()
     spec_path = output / "EP001-SC001-SEG001-WB-v1.0.json"
@@ -146,6 +146,25 @@ class WhiteboxTests(unittest.TestCase):
 
     def test_valid_full_source_and_asset_binding(self):
         self.assertEqual(wb.validate_spec(self.path)["render"]["frames"], 288)
+
+    def test_legacy_prompt_preserves_full_validation(self):
+        legacy = fixture(Path(self.temp.name) / "legacy", prompt_version="2.0")
+        self.assertEqual(wb.validate_spec(legacy)["render"]["frames"], 288)
+
+    def test_ambiguous_or_unsupported_prompt_rejected(self):
+        segment = Path(self.spec["source"]["segment"]["path"])
+        original = segment.read_text(encoding="utf-8")
+        for invalid in (
+            original + "\n### Seedance 2.0 Prompt\n~~~text\nconflicting draft\n~~~\n",
+            original + "\n### Seedance 2.5 Prompt\n~~~text\nsecond draft\n~~~\n",
+            original.replace("### Seedance 2.5 Prompt", "### Seedance 9.9 Prompt"),
+        ):
+            with self.subTest(header=invalid[-100:]):
+                segment.write_text(invalid, encoding="utf-8")
+                self.spec["source"]["segment"]["sha256"] = wb.digest(segment)
+                self.save()
+                with self.assertRaisesRegex(ValueError, "expected exactly one Seedance"):
+                    wb.validate_spec(self.path)
 
     def minimal(self):
         self.spec.update(schema_version=2, execution={"backend": "blender-mcp", "tool": "mcp__blender__execute_blender_code"},

@@ -144,6 +144,12 @@ def fenced_section(raw: str, heading: str) -> str | None:
     return match.group(1).strip() if match else None
 
 
+def seedance_prompt(raw: str) -> str | None:
+    """Read one current or legacy prompt without silently choosing between drafts."""
+    headings = re.findall(r"^### (Seedance (?:2\.5|2\.0) Prompt)\r?$", raw, re.M)
+    return fenced_section(raw, headings[0]) if len(headings) == 1 else None
+
+
 def table_rows(raw: str, heading: str) -> list[list[str]]:
     match = re.search(
         rf"^### {re.escape(heading)}\r?\n(?P<table>(?:\|.*\r?\n?)+?)(?=\r?\n(?:\r?\n)*### |\Z)",
@@ -879,9 +885,9 @@ def validate_segment(
             result.errors.append("segment prop-assets do not match scene plan catalog")
         if source_ids != catalog.source_ids:
             result.errors.append("segment source-text-ids do not match scene plan catalog")
-    prompt = fenced_section(raw, "Seedance 2.0 Prompt")
+    prompt = seedance_prompt(raw)
     if prompt is None:
-        result.errors.append("missing Seedance 2.0 Prompt")
+        result.errors.append("expected exactly one Seedance 2.5 Prompt (legacy 2.0 accepted)")
     elif (
         duration > 0
         and scene_asset in assets

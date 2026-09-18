@@ -83,7 +83,7 @@ def validate_spec(path):
     require(values["status"] == "approved", "whitebox requires approved segment")
     segment_id = re.sub(rf"-{sb.VERSION}$", "", files["segment"].stem)
     require(path.stem.split("-WB-")[0] == segment_id, "WB belongs to another segment")
-    prompt = sb.fenced_section(raw, "Seedance 2.0 Prompt")
+    prompt = sb.seedance_prompt(raw)
     visual, originals = source_shots(prompt)
     require(text_digest(visual) == source["visual_sha256"], "stale VISUAL CONTENT")
     render = spec["render"]

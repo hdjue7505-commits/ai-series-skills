@@ -91,7 +91,9 @@ description: >-
 
 每个镜头必须写景别、构图、机位角度、运镜和唯一的 `Dramatic execution`。不得再把 `Subject and action`、`Performance` 与台词拆成并列字段。`Dramatic execution` 必须按可见时间顺序，把主体目标、动作与关键姿势、STYLE-BASE 允许的表演/形变/线面/体积变化、说话时机、对手或环境即时反应和镜头最终落点写成一条因果链；禁止只写抽象情绪或在动作之后补挂孤立台词。
 
-## 4｜Seedance 2.0 提示词
+## 4｜Seedance 2.5 提示词
+
+新主稿使用 `### Seedance 2.5 Prompt`；旧 `Seedance 2.0 Prompt` 保持可读，一个片段只保留一个提示词区块。此标题标识目标创作入口，不代表平台能力已验证。
 
 正式英文提示词固定三段：
 
