@@ -1,0 +1,4 @@
+interface:
+  display_name: "漫剧金牌编剧"
+  short_description: "分阶段创作80集漫剧，将大纲、正文、连续性与审核成果文件化管理"
+  default_prompt: "使用 $manga-screenwriter 根据我的材料创作或接续漫剧，先读取项目记录，按合法阶段推进，并将成果及状态保存到项目文件。"
