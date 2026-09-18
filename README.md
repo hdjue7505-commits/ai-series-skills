@@ -175,3 +175,8 @@ python scripts/install.py
 [开始创作](#start) · [阅读制作指南](docs/workflow.md) · [查看故事示例](examples/last-train.md)
 
 </div>
+
+## 借鉴与致谢
+
+- [ai-series-visual-dna](ai-series-visual-dna) 借鉴了 [cinema-dna-21x9x3](https://github.com/dacnay816y62-hub/cinema-dna-21x9x3)。
+- [ai-series-storyboard-master](ai-series-storyboard-master) 借鉴了丧尸清道夫的分镜结构。
