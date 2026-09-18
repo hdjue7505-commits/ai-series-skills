@@ -14,6 +14,10 @@
 
 <sub>中文剧作 / 16:9 真人电影质感 / 可追溯资产 / Blender MCP 预演</sub>
 
+<p align="center">
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License: MIT"></a>
+</p>
+
 </div>
 
 ---
@@ -215,3 +219,8 @@ python scripts/install.py
 
 - [ai-series-visual-dna](ai-series-visual-dna) 借鉴了 [cinema-dna-21x9x3](https://github.com/dacnay816y62-hub/cinema-dna-21x9x3)。
 - [ai-series-storyboard-master](ai-series-storyboard-master) 借鉴了丧尸清道夫的分镜结构。
+
+## 开源协议
+
+本项目基于 [MIT 协议](LICENSE) 开源。
+
