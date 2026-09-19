@@ -199,7 +199,18 @@ Model-Sheet Prompt 必须显式包含真人电影表达，并包含：`16:9`、`
 ~~~
 ```
 
-Model-Sheet Prompt 必须显式包含真人电影表达，并包含 `16:9`、`2x2 four-panel grid`、`same scene`、`full-scene overview`、`feature-focused panel`、`defining scene features`；还必须明确 `foreground`、`midground`、`background`、`entrance`、`exit`、`key props`、`light source`、`blocking zones` 与 `standing positions`。四格保持同一稳定空间母体、固定结构、材质、道具位置与光源逻辑，但信息层级不同：至少一格完整广角全景，至少一格非广角特征视图，其余格补足调度关系或核心特征。特征格须与全景格核对空间归属、尺度和固定位置，不得变成孤立产品图或拼入不同地点/条件变体。实景、实体布景或数字环境均可采用；悬浮山门、洞天和超常建筑保留世界内稳定相对布局、出入方式、可行动区域及视效融合，不要求现实工程可建。
+Model-Sheet Prompt 必须显式包含真人电影表达，并包含 `16:9`、`2x2 four-panel grid`、`same scene` 及下列四个分区短语；还必须明确 `defining scene features`、`foreground`、`midground`、`background`、`entrance`、`exit`、`key props`、`light source`、`blocking zones` 与 `standing positions`。
+
+四格固定排列，不得用自由补充视图替代：
+
+| 位置 | 视图与英文分区短语 | 信息职责 |
+|---|---|---|
+| 左上 | 全景图 `upper-left: full-scene overview` | 完整广角全景，交代场景全貌、前中远景和空间拓扑。 |
+| 右上 | 俯视图 `upper-right: top-down view` | 自上向下展示平面布局、出入口、通道、关键道具及调度区的相对位置，不以普通高机位斜拍替代。 |
+| 左下 | 侧视图 `lower-left: side view` | 从侧向展示纵深、高差、上下层、遮挡及可站位区域，不重复正面全景。 |
+| 右下 | 特征图 `lower-right: feature-focused panel` | 非广角局部视图，清晰展示最具识别性的结构、材质/装饰、固定关键道具或世界观痕迹，保留可定位的空间上下文。 |
+
+四格保持同一稳定空间母体、固定结构、材质、尺度、道具位置与光源逻辑，使用同一时间、天气和陈设状态。俯视与侧视仍保留真人电影材质和成像，不转换为线稿、平面图或游戏地图；室内遇屋顶或墙体遮挡时可明确使用仅用于展示的隐藏遮挡层或剖切，不得改变实际建筑结构。特征格须与其他三格核对空间归属、尺度和固定位置，不得变成孤立产品图或拼入不同地点/条件变体。实景、实体布景或数字环境均可采用；悬浮山门、洞天和超常建筑保留世界内稳定相对布局、出入方式、可行动区域及视效融合，不要求现实工程可建。
 
 `Scene Base` 保存稳定空间、材料、前中远景关系、出入口、固定道具、世界内光源位置、调度与站位区域；悬浮平台的固定关系、洞天入口或常驻超自然环境现象属于空间事实，不是全局风格词。禁止具体角色、剧情动作、对白、摄影机、镜头、画幅和全局画质词。
 

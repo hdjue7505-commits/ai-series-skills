@@ -105,10 +105,12 @@ CASES = (
         ),
         "model": (
             "Live-action fantasy environment with integrated cinematic VFX, 16:9, 2x2 four-panel "
-            "grid of the same scene. A full-scene overview establishes foreground landing steps, "
-            "midground suspended court and background stone arch. A non-wide feature-focused "
-            "panel resolves the defining scene features: unsupported platform edges and their "
-            "violet inscriptions. Complementary panels preserve identical platform spacing, "
+            "grid of the same scene. Upper-left: full-scene overview establishes foreground landing steps, "
+            "midground suspended court and background stone arch. Upper-right: top-down view "
+            "shows platform layout and connecting routes. Lower-left: side view reveals platform "
+            "heights and occlusion. Lower-right: feature-focused panel uses a non-wide detail "
+            "to resolve the defining scene features: unsupported platform edges and their "
+            "violet inscriptions. All panels preserve identical platform spacing, "
             "entrance bridge, exit portal, key props and light source positions. Daylight and "
             "spiritual inscriptions produce consistent illumination across every panel. Blocking "
             "zones and standing positions remain readable on the upper surfaces. Preserve "
@@ -237,6 +239,19 @@ class LiveActionWorkflowTests(unittest.TestCase):
             with self.subTest(asset=asset_id):
                 result = ART[case["validator"]](path, raw, style_id, "ASSET-INDEX-v1.0", traits)
                 self.assertEqual(result.errors, [])
+                if case["prefix"] == "SCN":
+                    for panel in (
+                        "Upper-left: full-scene overview",
+                        "Upper-right: top-down view",
+                        "Lower-left: side view",
+                        "Lower-right: feature-focused panel",
+                    ):
+                        with self.subTest(missing_panel=panel):
+                            invalid = ART[case["validator"]](
+                                path, raw.replace(panel, "Complementary view"),
+                                style_id, "ASSET-INDEX-v1.0", traits,
+                            )
+                            self.assertTrue(invalid.errors)
             index += (
                 f"### {case['heading']}\n"
                 "| Asset ID | 名称 | 收录依据 | 出现范围 | 当前文件 | 参考标签 |\n"
